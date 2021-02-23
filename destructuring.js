@@ -58,8 +58,8 @@ function greeting( obj ) {
 function totalPopulation (obj){
   let {utah} = obj;
   let {california} = obj;
-  let {texas} =obj;
-  let {arizona} =obj;
+  let {texas} = obj;
+  let {arizona} = obj;
   return (utah + california + texas + arizona)
 }
 
@@ -74,11 +74,14 @@ function totalPopulation (obj){
   Push these new variables to an array and return the array. 
 */
 
+
 function ingredients (obj) {
+  let newArr = [];
   let {carb} = obj;
   let {fat} = obj;
   let {protein} = obj;
-  
+  newArr.push(carb,fat,protein);
+  return newArr
 }
 
 ////////// PROBLEM 5 //////////
@@ -95,7 +98,9 @@ function ingredients (obj) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers ({first,second,third}) {
+  return Math.min(first,second,third)
+}
 
 
 
@@ -107,6 +112,13 @@ function ingredients (obj) {
   Find the longest array and return that array.
 */
 
-//Code Here
-
+function numberGroups ({a,b,c}) {
+  if (a.length > b.length && a.length > c.length) {
+    return a
+  } else if (b.length > a.length && b.length > c.length) {
+    return b
+  } else {
+    return c
+  }
+}
 
