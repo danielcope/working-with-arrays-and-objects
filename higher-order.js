@@ -21,7 +21,7 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers = mixedNumbers.filter(function(ele,i,arr){
+let evenNumbers = mixedNumbers.filter((ele,i,arr) => {
   if (ele%2 === 0){
     return true
   }
@@ -46,9 +46,7 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 //Code Here
-let postTaxPrices = prices.map(function(ele,i,arr) {
-  return ele * 1.07
-});
+let postTaxPrices = prices.map((ele,i,arr) => ele * 1.07);
 
 
 
@@ -67,9 +65,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation = populations.reduce(function(acc,ele,i,arr){
-  return acc + ele
-});
+let totalPopulation = populations.reduce((acc,ele,i,arr) =>  acc + ele);
 
 
 
@@ -111,11 +107,12 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 
-let orderTotals = orders.map(function (ele){
-        return ele["price"] * (1+ele["tax"])
-});
+// let orderTotals = orders.map(function (ele){
+//         return ele["price"] * (1+ele["tax"])
+// });
 
 
+let orderTotals = orders.map(ele => ele["price"]* (1+ele["tax"]));
 
 ////////// PROBLEM 6 //////////
 
@@ -133,7 +130,7 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal = purchases.reduce(function(acc,ele,i,array) {
+let bobsTotal = purchases.reduce((acc,ele,i,array) => {
   if (ele["owner"] === "Bob"){
   return acc += ele["price"]
   } else {
